@@ -10,7 +10,7 @@
 - [x] 5.0 dodać konfigurację docker-compose
 
 Dodatkowo:
-- [ ] plik dockerfile
+- [x] pliki dockerfile
 - [ ] link do dockerhub
 
 ## Zadanie 2 - Scala - Kontroler do produktów

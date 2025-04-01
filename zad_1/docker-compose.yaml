@@ -3,9 +3,9 @@ services:
     build:
       context: .               
       dockerfile: Dockerfile.python
-    image: python_image:latest            
+    image: leriki/python-ebiznes:v1         
   serviceApp:
     build:
       context: .
       dockerfile: Dockerfile.app
-    image: app_image:latest
+    image: leriki/app-ebiznes:v1
