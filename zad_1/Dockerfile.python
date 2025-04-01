@@ -1,0 +1,10 @@
+FROM ubuntu:latest
+
+# Python 3.10 instalation
+RUN apt-get upgrade && apt-get update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository -y ppa:deadsnakes/ppa && \
+    apt-get -y install python3.10
+
+# Verify installations
+CMD ["python3.10", "--version"]
