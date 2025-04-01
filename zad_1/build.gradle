@@ -1,0 +1,25 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+    id 'java'
+    id 'application'
+}
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
+
+}
+ 
+application {
+    mainClass.set("ebiznes.Hello")
+}
+ 
+tasks.jar {
+    manifest {
+        attributes 'Main-Class': 'ebiznes.HelloKt'
+    }
+}

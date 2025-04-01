@@ -14,10 +14,22 @@ RUN curl -s "https://get.sdkman.io" | bash && \
 
 ENV SDKMAN_DIR="$HOME/.sdkman"
 ENV PATH="$SDKMAN_DIR/bin:$SDKMAN_DIR/candidates/kotlin/current/bin:$SDKMAN_DIR/candidates/gradle/current/bin:$PATH"
-
+ENV PATH="/opt/kotlin/bin:${PATH}"
+ENV GRADLE_HOME=/opt/gradle
+ENV PATH="${GRADLE_HOME}/bin:${PATH}"
 
 # JDBC SQLite instalation
 RUN wget https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.45.1.0/sqlite-jdbc-3.45.1.0.jar -O /usr/local/lib/sqlite-jdbc.jar
 
 # Verify installations
-CMD ["bash", "-c", "java -version && kotlinc -version && gradle -v && sqlite3 --version"]
+RUN java -version && \
+    kotlinc -version && \
+    gradle -v && \
+    sqlite3 --version
+
+COPY . /app
+WORKDIR /app
+
+RUN gradle clean build
+
+CMD ["java", "-jar", "build/libs/app.jar"]

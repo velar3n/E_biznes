@@ -1,0 +1,11 @@
+services:
+  servicePython:
+    build:
+      context: .               
+      dockerfile: Dockerfile.python
+    image: python_image:latest            
+  serviceApp:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    image: app_image:latest
