@@ -11,7 +11,7 @@
 
 Dodatkowo:
 - [x] pliki dockerfile
-- [ ] link do dockerhub
+- [x] link do dockerhub
 
 ## Zadanie 2 - Scala - Kontroler do produktów
 Należy stworzyć aplikację na frameworku Play w Scali 3. 
