@@ -11,15 +11,15 @@ import models.Product
 class ProductController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
 
     private val productList = new mutable.ListBuffer[Product]()
-    productList += Product(1, "apple")
-    productList += Product(2, "bear")
-    productList += Product(3, "chainsaw")
-    productList += Product(4, "double cheesburger")
-    productList += Product(5, "epipen")
+    productList += Product(1, "apple", 1.29, 1)
+    productList += Product(2, "bear", 5999.99, 2)
+    productList += Product(3, "chainsaw", 599.0, 3)
+    productList += Product(4, "double cheesburger", 4.99, 1)
+    productList += Product(5, "epipen", 10.0, 3)
 
     implicit val productFormat: OFormat[Product] = Json.format[Product]
 
-    def getAllProducts: Action[AnyContent] = Action {
+    def getAll: Action[AnyContent] = Action {
         if (productList.isEmpty) {
             NoContent
         }
@@ -28,14 +28,14 @@ class ProductController @Inject()(val controllerComponents: ControllerComponents
         }
     }
 
-    def getProduct(id: Int): Action[AnyContent] = Action {
+    def get(id: Int): Action[AnyContent] = Action {
         productList.find(_.id == id) match {
             case Some(product) => Ok(Json.toJson(product))
             case None => NotFound
         }
     }
 
-    def addProduct: Action[AnyContent] = Action { implicit request =>
+    def add: Action[AnyContent] = Action { implicit request =>
         request.body.asJson.flatMap(Json.fromJson[Product](_).asOpt) match {
             case Some(product) =>
                 val nextId = productList.map(_.id).max + 1
@@ -46,7 +46,7 @@ class ProductController @Inject()(val controllerComponents: ControllerComponents
         }
     }
 
-    def updateProduct(id: Int): Action[AnyContent] = Action { implicit request =>
+    def update(id: Int): Action[AnyContent] = Action { implicit request =>
         productList.find(_.id == id) match {
             case Some(existingProduct) =>
                 request.body.asJson.flatMap(Json.fromJson[Product](_).asOpt) match {
@@ -61,7 +61,7 @@ class ProductController @Inject()(val controllerComponents: ControllerComponents
         }
     }
 
-    def deleteProduct(id: Int): Action[AnyContent] = Action {
+    def delete(id: Int): Action[AnyContent] = Action {
         productList.find(_.id == id) match {
             case Some(product) =>
                 productList -= product
