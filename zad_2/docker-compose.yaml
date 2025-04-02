@@ -1,0 +1,6 @@
+services:
+  zadanie2:
+    build: .
+    image: leriki/ebiznes_zad2:v1
+    ports:
+      - 9000:9000
