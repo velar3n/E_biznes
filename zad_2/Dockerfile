@@ -17,8 +17,10 @@ ENV PATH=$PATH:/root/.sdkman/candidates/java/current/bin
 ENV PATH=$PATH:/root/.sdkman/candidates/sbt/current/bin
 ENV PATH=$PATH:/root/.sdkman/candidates/scala/current/bin
 
-COPY . /app
-WORKDIR /app
+WORKDIR /controler-app
+COPY product-controler/ .
+
+RUN sbt compile
 
 EXPOSE 9000
 

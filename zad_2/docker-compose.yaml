@@ -1,6 +1,16 @@
 services:
-  zadanie2:
+  controller-app:
     build: .
-    image: leriki/ebiznes_zad2:v1
     ports:
-      - 9000:9000
+      - "9000:9000"
+    restart: always
+
+  ngrok:
+      image: ngrok/ngrok
+      depends_on:
+        - controller-app
+      environment:
+        NGROK_AUTHTOKEN: ${NGROK_TOKEN}
+      ports:
+        - "4040:4040"
+      command: http controller-app:9000
