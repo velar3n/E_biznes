@@ -1,5 +1,0 @@
-package ebiznes
-
-fun main() {
-
-}
