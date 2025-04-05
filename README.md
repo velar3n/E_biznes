@@ -24,8 +24,8 @@ Należy stworzyć aplikację na frameworku Play w Scali 3.
 Kontrolery mogą bazować na listach zamiast baz danych. CRUD: show all, show by id (get), update (put), delete (delete), add (post). 
 
 ## Zadanie 3 - Kotlin - przesyłanie wiadomości Discord
-- [ ] 3.0 Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord
-- [ ] 3.5 Aplikacja jest w stanie odbierać wiadomości użytkowników z platformy Discord skierowane do aplikacji (bota)
-- [ ] 4.0 Zwróci listę kategorii na określone żądanie użytkownika
-- [ ] 4.5 Zwróci listę produktów wg żądanej kategorii
+- [x] 3.0 Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord
+- [x] 3.5 Aplikacja jest w stanie odbierać wiadomości użytkowników z platformy Discord skierowane do aplikacji (bota)
+- [x] 4.0 Zwróci listę kategorii na określone żądanie użytkownika
+- [x] 4.5 Zwróci listę produktów wg żądanej kategorii
 - [ ] 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex

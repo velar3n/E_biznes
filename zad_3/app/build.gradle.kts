@@ -11,15 +11,19 @@ repositories {
 }
 
 dependencies {
+    // Ktor
+    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
+    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
+    implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
+    implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("dev.kord:kord-core:0.15.0")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
+
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testImplementation(libs.junit.jupiter.engine)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
     implementation(libs.guava)
-
-    implementation("io.ktor:ktor-client-core:$ktor_version")
-    implementation("io.ktor:ktor-client-cio:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
 }
 
 java {
