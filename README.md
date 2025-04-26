@@ -33,15 +33,15 @@ Kontrolery mogą bazować na listach zamiast baz danych. CRUD: show all, show by
 - [ ] 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex
 
 
-## Zadanie 4 - Go - Kontroler produktów
+## Zadanie 4 - Go - Kontroler produktów - [link](https://github.com/velar3n/E_biznes/tree/main/zad_4)
 
 Należy stworzyć projekt w echo w Go. Należy wykorzystać gorm do stworzenia 5 modeli, gdzie pomiędzy dwoma musi być relacja. Należy zaimplementować proste endpointy do dodawania oraz wyświetlania danych za pomocą modeli. Jako bazę danych można wybrać dowolną, sugerowałbym jednak pozostać przy sqlite.
 
-- [x] 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD
-- [x] 3.5 Należy stworzyć model Produktów wykorzystując gorm oraz wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast listy)
-- [x] 4.0 Należy dodać model Koszyka oraz dodać odpowiedni endpoint
-- [x] 4.5 Należy stworzyć model kategorii i dodać relację między kategorią, a produktem
-- [x] 5.0 pogrupować zapytania w gorm’owe scope'y
+- [x] 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD - [Commit link](https://github.com/velar3n/E_biznes/commit/ff7cfdec32a45abcefc85545650536a8deb9360a)
+- [x] 3.5 Należy stworzyć model Produktów wykorzystując gorm oraz wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast listy) - [Commit link](https://github.com/velar3n/E_biznes/commit/ff7cfdec32a45abcefc85545650536a8deb9360a)
+- [x] 4.0 Należy dodać model Koszyka oraz dodać odpowiedni endpoint - [Commit link](https://github.com/velar3n/E_biznes/commit/d2591521fdfa6fd161f06c68bc2be6487e346681)
+- [x] 4.5 Należy stworzyć model kategorii i dodać relację między kategorią, a produktem - [Commit link](https://github.com/velar3n/E_biznes/commit/d2591521fdfa6fd161f06c68bc2be6487e346681)
+- [x] 5.0 pogrupować zapytania w gorm’owe scope'y - [Commit link](https://github.com/velar3n/E_biznes/commit/d2591521fdfa6fd161f06c68bc2be6487e346681)
 
 
 ## Zadanie 5 - Frontend - Aplikacja kliencka zakupów
