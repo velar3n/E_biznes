@@ -1,5 +1,5 @@
 package controllers
- 
+
 import (
 	"github.com/go-playground/validator/v10"
 	"github.com/labstack/echo/v4"
@@ -8,13 +8,12 @@ import (
 	"strconv"
 	"zad_4/models"
 )
- 
+
 type ProductController struct{}
 
-var validate = validator.New()
- 
 func (w *ProductController) CreateProduct(c echo.Context) error {
 	db := c.Get("db").(*gorm.DB)
+	var validate = validator.New()
 
 	var product models.Product
 
@@ -23,14 +22,21 @@ func (w *ProductController) CreateProduct(c echo.Context) error {
 	}
 
 	if validationErr := validate.Struct(&product); validationErr != nil {
-		return c.JSON(http.StatusBadRequest, "Error")
+		return c.JSON(http.StatusBadRequest, validationErr.Error())
+	}
+
+	var category models.Category
+	db.First(&category, product.CategoryID)
+
+	if category.ID == 0 {
+		return c.JSON(http.StatusBadRequest, "Category not found")
 	}
 
 	db.Create(&product)
 
 	return c.JSON(http.StatusCreated, &product)
 }
- 
+
 func (w *ProductController) GetProduct(c echo.Context) error {
 	db := c.Get("db").(*gorm.DB)
 
@@ -45,9 +51,10 @@ func (w *ProductController) GetProduct(c echo.Context) error {
 
 	return c.JSON(http.StatusOK, &product)
 }
- 
+
 func (w *ProductController) UpdateProduct(c echo.Context) error {
 	db := c.Get("db").(*gorm.DB)
+	var validate = validator.New()
 
 	id, _ := strconv.Atoi(c.Param("id"))
 	var currentProduct models.Product
@@ -67,11 +74,20 @@ func (w *ProductController) UpdateProduct(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, "Error")
 	}
 
-	db.Save(&product)
+	var category models.Category
+	db.First(&category, product.CategoryID)
 
-	return c.JSON(http.StatusOK, &product)
+	if category.ID == 0 {
+		return c.JSON(http.StatusBadRequest, "Category not found")
+	}
+
+	currentProduct.Price = product.Price
+	currentProduct.Name = product.Name
+	db.Save(&currentProduct)
+
+	return c.JSON(http.StatusOK, &currentProduct)
 }
- 
+
 func (w *ProductController) DeleteProduct(c echo.Context) error {
 	db := c.Get("db").(*gorm.DB)
 
@@ -86,8 +102,8 @@ func (w *ProductController) DeleteProduct(c echo.Context) error {
 	db.Delete(&models.Product{}, id)
 
 	return c.NoContent(http.StatusOK)
-	}
- 
+}
+
 func (w *ProductController) GetAllProducts(c echo.Context) error {
 	db := c.Get("db").(*gorm.DB)
 

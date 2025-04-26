@@ -17,7 +17,9 @@ func main() {
 		}
 	})
 
-	routes.ProductRoute(e)
+	routes.ProductRoutes(e)
+	routes.CartRoutes(e)
+	routes.CategoryRoutes(e)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }

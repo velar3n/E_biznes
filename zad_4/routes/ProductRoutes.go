@@ -5,7 +5,7 @@ import (
 	"zad_4/controllers"
 )
 
-func ProductRoute(e *echo.Echo) {
+func ProductRoutes(e *echo.Echo) {
 	productController := controllers.ProductController{}
 
 	e.GET("/products", productController.GetAllProducts)
