@@ -1,15 +1,23 @@
 package main
 
 import (
-	"net/http"
-	
 	"github.com/labstack/echo/v4"
+	"zad_4/routes"
+	"zad_4/db"
 )
-
 func main() {
 	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
+
+	db := database.Connect()
+
+	e.Use(func(next echo.HandlerFunc) echo.HandlerFunc {
+		return func(c echo.Context) error {
+			c.Set("db", db)
+			return next(c)
+		}
 	})
+
+	routes.ProductRoute(e)
+
 	e.Logger.Fatal(e.Start(":1323"))
 }
