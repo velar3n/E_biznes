@@ -1,4 +1,4 @@
-FROM golang:1.24-alpine AS builder
+FROM golang:1.24 AS backend
 
 WORKDIR /app
 
@@ -7,11 +7,8 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o app server.go
-
-FROM alpine:latest
-WORKDIR /root/
-COPY --from=builder /app/app .
+RUN CGO_ENABLED=1 GOOS=linux go build -o /backend
 
 EXPOSE 1323
-CMD ["./app"]
+
+CMD ["/backend"]
