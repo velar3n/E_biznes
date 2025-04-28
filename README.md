@@ -44,15 +44,15 @@ Należy stworzyć projekt w echo w Go. Należy wykorzystać gorm do stworzenia 5
 - [x] 5.0 pogrupować zapytania w gorm’owe scope'y - [Commit link](https://github.com/velar3n/E_biznes/commit/d2591521fdfa6fd161f06c68bc2be6487e346681)
 
 
-## Zadanie 5 - Frontend - Aplikacja kliencka zakupów
+## Zadanie 5 - Frontend - Aplikacja klient-serwe
 
 Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js. W ramach projektu należy stworzyć trzy komponenty: Produkty, Koszyk oraz Płatności. Koszyk oraz Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej. Aplikacja serwera w jednym z trzech języków: Kotlin, Scala, Go. Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks.
 
-- [] 3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej;
-- [] 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing
-- [] 4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks
-- [] 4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose
-- [] 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
+- [ ] 3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej;
+- [ ] 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing
+- [ ] 4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks
+- [ ] 4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose
+- [ ] 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
 
 
 ## Zadanie 6 - Testy
@@ -63,22 +63,22 @@ Należy stworzyć 20 przypadków testowych w jednym z rozwiązań:
 
 Testy mają w sumie zawierać minimum 50 asercji (3.5). Mają również uruchamiać się na platformie Browserstack (5.0). Proszę pamiętać o stworzeniu darmowego konta via https://education.github.com/pack.
 
-- [] 3.0 Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala)
-- [] 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji
-- [] 4.0 Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
-- [] 4.5 Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
-- [] 5.0 Należy uruchomić testy funkcjonalne na Browserstacku
+- [ ] 3.0 Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala)
+- [ ] 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji
+- [ ] 4.0 Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
+- [ ] 4.5 Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
+- [ ] 5.0 Należy uruchomić testy funkcjonalne na Browserstacku
 
 
 ## Zadanie 7 - Sonar
 
 Należy dodać projekt aplikacji klienckiej oraz serwerowej (jeden branch, dwa repozytoria) do Sonara w wersji chmurowej (https://sonarcloud.io/). Należy poprawić aplikacje uzyskując 0 bugów, 0 zapaszków, 0 podatności, 0 błędów bezpieczeństwa. Dodatkowo należy dodać widżety sonarowe do README w repozytorium dane projektu z wynikami.
 
-- [] 3.0 Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita
-- [] 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej)
-- [] 4.0 Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)
-- [] 4.5 Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)
-- [] 5.0 Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej
+- [ ] 3.0 Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita
+- [ ] 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej)
+- [ ] 4.0 Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)
+- [ ] 4.5 Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)
+- [ ] 5.0 Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej
 
 https://golangci-lint.run/, 
 https://github.com/pinterest/ktlint, 
