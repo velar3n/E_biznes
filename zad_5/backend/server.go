@@ -19,7 +19,7 @@ func main() {
 
 	routes.ProductRoutes(e)
 	routes.CartRoutes(e)
-	routes.CategoryRoutes(e)
+	routes.PaymentRoutes(e)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }

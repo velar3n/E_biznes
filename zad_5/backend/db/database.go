@@ -18,7 +18,7 @@ func Connect() *gorm.DB {
 	db.AutoMigrate(&models.Cart{})
 	db.AutoMigrate(&models.Payment{})
 
-	db.SeedProducts(db)
+	SeedProducts(db)
 
 	return db
 }

@@ -11,7 +11,7 @@ func SeedProducts(db *gorm.DB) {
         {Name: "Smartphone", Category: "Electronics", Price: 2999.00, Description: "A smartphone to be able to call your mom for help", Amount: 25},
         {Name: "Headphones", Category: "Electronics", Price: 590.00, Description: "Headphines that enable you to listen to music in public", Amount: 50},
 		{Name: "Chair", Category: "Furniture", Price: 560.00, Description: "A chair so you don't have to sit on the floor", Amount: 10},
-        {Name: "Mirror", Category: "Furniture", Price: 120.00, Description: "For mirror selfies slay girl", Amount: 20}
+        {Name: "Mirror", Category: "Furniture", Price: 120.00, Description: "For mirror selfies slay girl", Amount: 20},
     }
 
     for _, product := range products {
