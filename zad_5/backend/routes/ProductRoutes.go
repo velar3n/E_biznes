@@ -9,5 +9,4 @@ func ProductRoutes(e *echo.Echo) {
 	productController := controllers.ProductController{}
 
 	e.GET("/products", productController.GetAllProducts)
-	// e.GET("/products/:id", productController.GetProduct)
 }

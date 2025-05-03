@@ -6,7 +6,8 @@ import (
 )
 
 func PaymentRoutes(e *echo.Echo) {
-	paymentController := controllers.CartController{}
+	paymentController := controllers.PaymentController{}
 
-	e.POST("/payments/:id", paymentController.Pay)
+	e.POST("/payment", paymentController.CreatePayment)
+	e.POST("/payment/:id", paymentController.Pay)
 }

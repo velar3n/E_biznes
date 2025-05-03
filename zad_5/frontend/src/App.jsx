@@ -6,12 +6,26 @@ import ProductList from './pages/ProductList'
 
 function App() {
   return (
-    <>
-      <h1>Vite + React</h1>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <BrowserRouter>
+        <nav>
+            <ul>
+                <li>
+                    <Link to="/">Produkty</Link>
+                </li>
+                <li>
+                    <Link to="/cart">Koszyk</Link>
+                </li>
+            </ul>
+        </nav>
+        <Routes>
+            <Route path="/" element={<ProductList/>}/>
+            <Route path="/payment" element={<Payment/>}/>
+            <Route path="/payment/:id" element={<Payment />} />
+            <Route path="/cart" element={<Cart/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

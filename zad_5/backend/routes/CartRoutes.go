@@ -8,5 +8,8 @@ import (
 func CartRoutes(e *echo.Echo) {
 	cartController := controllers.CartController{}
 
-	e.POST("/carts/:id", cartController.SendCart)
+	e.POST("/cart/update", cartController.UpdateCart)
+	e.POST("/cart", cartController.Purchase)
+	e.GET("/cart/:id", cartController.GetCart)
+	e.DELETE("/cart", cartController.DeleteCart)
 }
