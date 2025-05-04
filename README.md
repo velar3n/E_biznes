@@ -44,15 +44,15 @@ Należy stworzyć projekt w echo w Go. Należy wykorzystać gorm do stworzenia 5
 - [x] 5.0 pogrupować zapytania w gorm’owe scope'y - [Commit link](https://github.com/velar3n/E_biznes/commit/d2591521fdfa6fd161f06c68bc2be6487e346681)
 
 
-## Zadanie 5 - Frontend - Aplikacja klient-serwe
+## Zadanie 5 - Frontend - Aplikacja klient-serwer - [link](https://github.com/velar3n/E_biznes/tree/main/zad_5)
 
 Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js. W ramach projektu należy stworzyć trzy komponenty: Produkty, Koszyk oraz Płatności. Koszyk oraz Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej. Aplikacja serwera w jednym z trzech języków: Kotlin, Scala, Go. Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks.
 
-- [x] 3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej;
-- [x] 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing
-- [x] 4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks
-- [x] 4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose
-- [x] 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
+- [x] 3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej; - [Commit link](https://github.com/velar3n/E_biznes/commit/e0498703417d0a5b4daaae577f420683c91bc0b0)
+- [x] 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit link](https://github.com/velar3n/E_biznes/commit/e0498703417d0a5b4daaae577f420683c91bc0b0)
+- [x] 4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks - [Commit link](https://github.com/velar3n/E_biznes/commit/e0498703417d0a5b4daaae577f420683c91bc0b0)
+- [x] 4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit link](https://github.com/velar3n/E_biznes/commit/4918195568f2a72abc3446285e281ba20c4b2493)
+- [x] 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS - [Commit link](https://github.com/velar3n/E_biznes/commit/e0498703417d0a5b4daaae577f420683c91bc0b0)
 
 
 ## Zadanie 6 - Testy
