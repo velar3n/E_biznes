@@ -2,7 +2,7 @@
 
 # E-biznes - zadania
 
-## Zadanie 1 - Docker - Hello World - [link](https://github.com/velar3n/E_biznes/tree/main/zad_1)
+## ✅ Zadanie 1 - Docker - Hello World - [link](https://github.com/velar3n/E_biznes/tree/main/zad_1)
 - [x] 3.0 obraz ubuntu z Pythonem w wersji 3.10 - [Commit link](https://github.com/velar3n/E_biznes/commit/bebb102ae6a43852b67fdc92711f5201810da221)
 - [x] 3.5 obraz ubuntu:24.02 z Javą w wersji 8 oraz Kotlinem - [Commit link](https://github.com/velar3n/E_biznes/commit/cd1b62ac3aa93c2ffe6cdf3d812efe6d33a38741)
 - [x] 4.0 do powyższego należy dodać najnowszego Gradle’a oraz paczkę JDBC SQLite w ramach projektu na Gradle (build.gradle) - [Commit link](https://github.com/velar3n/E_biznes/commit/cd1b62ac3aa93c2ffe6cdf3d812efe6d33a38741)
@@ -14,7 +14,7 @@ Dodatkowo:
 - [x] link do dockerhub
 
 
-## Zadanie 2 - Scala - Kontroler do produktów - [link](https://github.com/velar3n/E_biznes/tree/main/zad_2)
+## ✅ Zadanie 2 - Scala - Kontroler do produktów - [link](https://github.com/velar3n/E_biznes/tree/main/zad_2)
 Należy stworzyć aplikację na frameworku Play w Scali 3.
 - [x] 3.0 Należy stworzyć kontroler do Produktów - [Commit link](https://github.com/velar3n/E_biznes/commit/0fed769d043e9755111b4f69dd73d37aa1a01d99)
 - [x] 3.5 Do kontrolera należy stworzyć endpointy zgodnie z CRUD - dane pobierane z listy - [Commit link](https://github.com/velar3n/E_biznes/commit/0fed769d043e9755111b4f69dd73d37aa1a01d99)
@@ -25,7 +25,7 @@ Należy stworzyć aplikację na frameworku Play w Scali 3.
 Kontrolery mogą bazować na listach zamiast baz danych. CRUD: show all, show by id (get), update (put), delete (delete), add (post). 
 
 
-## Zadanie 3 - Kotlin - Przesyłanie wiadomości Discord - [link](https://github.com/velar3n/E_biznes/tree/main/zad_3)
+## ✅ Zadanie 3 - Kotlin - Przesyłanie wiadomości Discord - [link](https://github.com/velar3n/E_biznes/tree/main/zad_3)
 - [x] 3.0 Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord - [Commit link](https://github.com/velar3n/E_biznes/commit/26b7573445c79ecb60bb911d03789c44f7912f02)
 - [x] 3.5 Aplikacja jest w stanie odbierać wiadomości użytkowników z platformy Discord skierowane do aplikacji (bota) - [Commit link](https://github.com/velar3n/E_biznes/commit/26b7573445c79ecb60bb911d03789c44f7912f02)
 - [x] 4.0 Zwróci listę kategorii na określone żądanie użytkownika - [Commit link](https://github.com/velar3n/E_biznes/commit/26b7573445c79ecb60bb911d03789c44f7912f02)
@@ -33,7 +33,7 @@ Kontrolery mogą bazować na listach zamiast baz danych. CRUD: show all, show by
 - [ ] 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex
 
 
-## Zadanie 4 - Go - Kontroler produktów - [link](https://github.com/velar3n/E_biznes/tree/main/zad_4)
+## ✅ Zadanie 4 - Go - Kontroler produktów - [link](https://github.com/velar3n/E_biznes/tree/main/zad_4)
 
 Należy stworzyć projekt w echo w Go. Należy wykorzystać gorm do stworzenia 5 modeli, gdzie pomiędzy dwoma musi być relacja. Należy zaimplementować proste endpointy do dodawania oraz wyświetlania danych za pomocą modeli. Jako bazę danych można wybrać dowolną, sugerowałbym jednak pozostać przy sqlite.
 
@@ -44,7 +44,7 @@ Należy stworzyć projekt w echo w Go. Należy wykorzystać gorm do stworzenia 5
 - [x] 5.0 pogrupować zapytania w gorm’owe scope'y - [Commit link](https://github.com/velar3n/E_biznes/commit/d2591521fdfa6fd161f06c68bc2be6487e346681)
 
 
-## Zadanie 5 - Frontend - Aplikacja klient-serwer - [link](https://github.com/velar3n/E_biznes/tree/main/zad_5)
+## ✅ Zadanie 5 - Frontend - Aplikacja klient-serwer - [link](https://github.com/velar3n/E_biznes/tree/main/zad_5)
 
 Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js. W ramach projektu należy stworzyć trzy komponenty: Produkty, Koszyk oraz Płatności. Koszyk oraz Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej. Aplikacja serwera w jednym z trzech języków: Kotlin, Scala, Go. Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks.
 
@@ -55,7 +55,7 @@ Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js. W ra
 - [x] 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS - [Commit link](https://github.com/velar3n/E_biznes/commit/e0498703417d0a5b4daaae577f420683c91bc0b0)
 
 
-## Zadanie 6 - Testy
+## ❌ Zadanie 6 - Testy
 
 Należy stworzyć 20 przypadków testowych w jednym z rozwiązań:
 - Cypress JS (JS)
@@ -70,7 +70,7 @@ Testy mają w sumie zawierać minimum 50 asercji (3.5). Mają również uruchami
 - [ ] 5.0 Należy uruchomić testy funkcjonalne na Browserstacku
 
 
-## Zadanie 7 - Sonar
+## ❌ Zadanie 7 - Sonar
 
 Należy dodać projekt aplikacji klienckiej oraz serwerowej (jeden branch, dwa repozytoria) do Sonara w wersji chmurowej (https://sonarcloud.io/). Należy poprawić aplikacje uzyskując 0 bugów, 0 zapaszków, 0 podatności, 0 błędów bezpieczeństwa. Dodatkowo należy dodać widżety sonarowe do README w repozytorium dane projektu z wynikami.
 
