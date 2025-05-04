@@ -63,10 +63,31 @@ func (w *PaymentController) Pay(c echo.Context) error {
 		return c.JSON(http.StatusInternalServerError, "Failed to load cart")
 	}
 
+	if err := db.Preload("CartItems.Product").First(&cart, payment.CartID).Error; err != nil {
+		return c.JSON(http.StatusInternalServerError, "Failed to load cart with items")
+	}
+	
+	for _, item := range cart.CartItems {
+		var product models.Product
+		if err := db.First(&product, item.ProductID).Error; err != nil {
+			return c.JSON(http.StatusInternalServerError, "Product not found")
+		}
+	
+		if product.Amount < item.Quantity {
+			return c.JSON(http.StatusBadRequest, "Not enough stock for product: " + product.Name)
+		}
+	
+		product.Amount -= item.Quantity
+	
+		if err := db.Save(&product).Error; err != nil {
+			return c.JSON(http.StatusInternalServerError, "Failed to update product stock")
+		}
+	}
+
 	if err := db.Where("cart_id = ?", cart.ID).Delete(&models.CartItem{}).Error; err != nil {
 		return c.JSON(http.StatusInternalServerError, "Failed to delete cart items")
 	}
-
+	
 	cart.Total = 0
 	if err := db.Save(&cart).Error; err != nil {
 		return c.JSON(http.StatusInternalServerError, "Failed to reset cart total")

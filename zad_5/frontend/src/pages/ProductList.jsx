@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImage } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
@@ -36,30 +38,39 @@ export default function ProductList() {
   if (error) return <div className="text-red-500 p-4">{error}</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Product List</h1>
+    <div className="product-list-container">
       {message && <div className="mb-4 text-green-600">{message}</div>}
       {products.length === 0 ? (
         <p>Loading...</p>
       ) : (
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="product-list">
           {products.map(product => (
-            <li key={product.ID} className="border p-4 rounded-xl shadow">
-              <h2 className="text-xl font-semibold">{product.name}</h2>
-              <p className="text-gray-500">Category: {product.category}</p>
-              <p className="text-lg font-medium mt-1">${product.price.toFixed(2)}</p>
-              <p className="mt-1">{product.description}</p>
-              <p className="text-sm mt-2">In stock: {product.amount}</p>
-              <button
-                onClick={() => handleAddToCart(product)}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-              >
-                Add to Cart
-              </button>
-            </li>
+            <div
+              key={product.ID}
+              className="product-card"
+            >
+              <div className="product-icon">
+                <FontAwesomeIcon icon={faImage} style={{ fontSize: "2.5rem", color: "#4b92df" }} />
+              </div>
+              <div className="product-details">
+                <h2>{product.name}</h2>
+                <p>Category: {product.category}</p>
+                <p>{product.description}</p>
+                <p>In stock: {product.amount}</p>
+              </div>
+              <div className="product-add-cart">
+                <h2>{product.price.toFixed(2)} zł</h2>
+                <button
+                  onClick={() => handleAddToCart(product)}
+                  className="cart-button"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
-  );
+  );  
 }

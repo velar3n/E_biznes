@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImage } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
 
 export default function Cart() {
@@ -75,52 +77,54 @@ export default function Cart() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">🛒 Cart</h1>
-  
+    <div className="cart-container">
+      <h1>Your Cart</h1>
       {message && <p className="text-green-600 mb-4">{message}</p>}
-  
       {cart.items.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        <ul className="space-y-4">
+        <div className="cart-container">
           {cart.items.map((item) => (
-            <li key={item.ID} className="flex items-center justify-between border p-3 rounded shadow">
-              <span>{item.product.name}</span>
-              <div className="flex items-center gap-2">
+            <div
+            key={item.ID}
+            className="product-card"
+            >
+              <div className="product-icon">
+                <FontAwesomeIcon icon={faImage} style={{ fontSize: "2.5rem", color: "#4b92df" }} />
+              </div>
+              <div className="product-details">
+                <h2>{item.product.name}</h2>
+                <p>Category: {item.product.category}</p>
+                <p>{item.product.price.toFixed(2)} zł</p>
+              </div>
+              <div className="cart-button-container">
                 <button
-                  className="bg-red-500 text-white px-2 py-1 rounded"
+                  className="cart-button-small"
                   onClick={() => handleRemoveFromCart(item.product)}
                 >
                   −
                 </button>
                 <span>{item.quantity}</span>
                 <button
-                  className="bg-green-500 text-white px-2 py-1 rounded"
+                  className="cart-button-small"
                   onClick={() => handleAddToCart(item.product)}
                 >
                   +
                 </button>
               </div>
-            </li>
+          </div>
           ))}
-        </ul>
+        </div>
       )}
-  
-      <div className="text-right mt-4 text-lg font-semibold">
-        Total: ${cart.total?.toFixed(2)}
-      </div>
-  
-      <div className="flex justify-between mt-6">
+      <h2>Total: {cart.total.toFixed(2)} zł</h2>
+      <div className="cart-buttons">
         <button
           onClick={clearCart}
-          className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
         >
           Clear Cart
         </button>
         <button
           onClick={purchaseCart}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
           Purchase
         </button>

@@ -32,39 +32,35 @@ export default function Payment() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded shadow">
-      <h1 className="text-xl font-bold mb-4">💳 Payment</h1>
-
+    <div className="payment-container">
+      <h1>Your Payment</h1>
       {message && <p className="mb-4 text-center text-blue-600">{message}</p>}
-
-      <div className="space-y-4">
+      <div className="payment-form">
         <input
           type="text"
           placeholder="Card Number"
           value={cardNumber}
           onChange={(e) => setCardNumber(e.target.value)}
-          className="w-full border px-4 py-2 rounded"
+          className="input-field"
         />
-
         <input
           type="text"
           placeholder="Expiration Date (MM/YY)"
           value={expirationDate}
           onChange={(e) => setExpirationDate(e.target.value)}
-          className="w-full border px-4 py-2 rounded"
+          className="input-field"
         />
-
         <input
           type="text"
           placeholder="CVC"
           value={cvc}
           onChange={(e) => setCvc(e.target.value)}
-          className="w-full border px-4 py-2 rounded"
+          className="input-field"
         />
 
         <button
           onClick={handlePayment}
-          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+          className="confirm-button"
         >
           Confirm
         </button>
