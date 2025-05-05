@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo "Running golangci-lint"
+
+golangci-lint run
+
+if [ $? -ne 0 ]; then
+  echo "Problem found."
+  exit 1
+fi
+
+echo "Linter OK"
