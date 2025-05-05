@@ -70,17 +70,17 @@ Testy mają w sumie zawierać minimum 50 asercji (3.5). Mają również uruchami
 - [ ] 5.0 Należy uruchomić testy funkcjonalne na Browserstacku
 
 
-## ✅ Zadanie 7 - Sonar
+## ✅ Zadanie 7 - Sonar - [link](https://github.com/velar3n/E_biznes/tree/main/zad_7)
 
 Należy dodać projekt aplikacji klienckiej oraz serwerowej (jeden branch, dwa repozytoria) do Sonara w wersji chmurowej (https://sonarcloud.io/). Należy poprawić aplikacje uzyskując 0 bugów, 0 zapaszków, 0 podatności, 0 błędów bezpieczeństwa. Dodatkowo należy dodać widżety sonarowe do README w repozytorium danego projektu z wynikami.
  
-- [x] 3.0 Należy dodać lintera do odpowiedniego kodu aplikacji serwerowej w hookach gita
-- [x] 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej)
-- [x] 4.0 Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)
-- [x] 4.5 Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)
-- [x] 5.0 Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej
+- [x] 3.0 Należy dodać lintera do odpowiedniego kodu aplikacji serwerowej w hookach gita - [Commit link](https://github.com/velar3n/E_biznes/commit/19c0b2bee94801cbd6cbebc5058c072574a034f3)
+- [x] 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit link](https://github.com/velar3n/E_biznes/commit/c29d01842453420ff1d44b7ba90fdf70706fd86b)
+- [x] 4.0 Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit link](https://github.com/velar3n/E_biznes/commit/c29d01842453420ff1d44b7ba90fdf70706fd86b)
+- [x] 4.5 Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit link](https://github.com/velar3n/E_biznes/commit/c29d01842453420ff1d44b7ba90fdf70706fd86b)
+- [x] 5.0 Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej - [Commit link](https://github.com/velar3n/E_biznes/commit/c29d01842453420ff1d44b7ba90fdf70706fd86b)
 
-- [x] Sonar scan widgets
+- [x] Sonar scan widgets - [Commit link](https://github.com/velar3n/E_biznes/commits/main/zad_7)
 
 https://golangci-lint.run/, 
 https://github.com/pinterest/ktlint, 
