@@ -66,7 +66,7 @@ func (w *CartController) UpdateCart(c echo.Context) error {
 
 	var existingCartItem models.CartItem
 	err = db.Where("cart_id = ? AND product_id = ?", 1, req.ProductID).First(&existingCartItem).Error
-	if err != nil && err != gorm.ErrRecordNotFound {
+	if err != nil {
 		return c.JSON(http.StatusInternalServerError, "Failed to check existing cart item")
 	}
 
@@ -75,28 +75,19 @@ func (w *CartController) UpdateCart(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, fmt.Sprintf("Not enough stock. Only %d items available.", product.Amount))
 	}
 	if newQuantity <= 0 {
-		err = db.Delete(&existingCartItem).Error
-		if err != nil {
-			return c.JSON(http.StatusInternalServerError, "Failed to remove cart item")
-		}
+		db.Delete(&existingCartItem)
 	}
 
 	if existingCartItem.ID != 0 {
 		existingCartItem.Quantity += req.QuantityChange
-		err = db.Save(&existingCartItem).Error
-		if err != nil {
-			return c.JSON(http.StatusInternalServerError, "Failed to update cart item")
-		}
+		db.Save(&existingCartItem)
 	} else {
 		cartItem := models.CartItem{
 			CartID:    1,
 			ProductID: req.ProductID,
 			Quantity:  1,
 		}
-		err = db.Create(&cartItem).Error
-		if err != nil {
-			return c.JSON(http.StatusInternalServerError, "Failed to add cart item")
-		}
+		db.Create(&cartItem)
 	}
 
 	var cart models.Cart
