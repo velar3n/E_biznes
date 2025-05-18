@@ -6,4 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  experimentalMemoryManagement: true,
+  numTestsKeptInMemory: 1,
+  viewportWidth: 1920,
+  viewportHeight: 1080,
 });
