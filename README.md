@@ -55,7 +55,7 @@ Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js. W ra
 - [x] 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS - [Commit link](https://github.com/velar3n/E_biznes/commit/e0498703417d0a5b4daaae577f420683c91bc0b0)
 
 
-## ✅ Zadanie 6 - Testy
+## ✅ Zadanie 6 - Testy - [link](https://github.com/velar3n/E_biznes/tree/main/zad_6)
 
 Należy stworzyć 20 przypadków testowych w jednym z rozwiązań:
 - Cypress JS (JS)
@@ -63,8 +63,8 @@ Należy stworzyć 20 przypadków testowych w jednym z rozwiązań:
 
 Testy mają w sumie zawierać minimum 50 asercji (3.5). Mają również uruchamiać się na platformie Browserstack (5.0). Proszę pamiętać o stworzeniu darmowego konta via https://education.github.com/pack.
 
-- [x] 3.0 Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala)
-- [x] 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji
+- [x] 3.0 Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala) - [Commit link](https://github.com/velar3n/E_biznes/commit/de76507bd7d4134348bac27ef2c705da3b252088)
+- [x] 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji - [Commit link](https://github.com/velar3n/E_biznes/commit/de76507bd7d4134348bac27ef2c705da3b252088)
 - [ ] 4.0 Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
 - [ ] 4.5 Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
 - [ ] 5.0 Należy uruchomić testy funkcjonalne na Browserstacku
