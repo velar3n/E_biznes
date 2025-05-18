@@ -19,6 +19,24 @@ services:
     networks:
       - app_network
 
+  selenium:
+    image: selenium/standalone-chrome
+    ports:
+      - "4444:4444"
+    networks:
+      - app_network
+
+  tests:
+    build:
+      context: ./tests
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+      - frontend
+      - selenium
+    networks:
+      - app_network
+
 networks:
   app_network:
     driver: bridge
